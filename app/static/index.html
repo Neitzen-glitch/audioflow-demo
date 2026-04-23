@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioFlow Demo</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="glass-card">
+            <div class="header">
+                <h2>
+                    <i class="ph ph-waves"></i>
+                    AudioFlow
+                </h2>
+                <p>
+                    Stream and download tracks seamslessly.
+                </p>
+            </div>
+
+            <div class="input-group">
+                <i class="ph ph-link"></i>
+                <input type="text" id="musicUrl" placeholder="Paste direct MP3 link here...">
+            </div>
+
+            <div class="action-button">
+                <button class="btn btn-primary" onclick="playMusic()">
+                    <i class="ph ph-play-circle"></i>
+                    Preview
+                </button>
+                <button class="btn btn-secondary" onclick="downloadMusic()">
+                    <i class="ph ph-download-simple"></i>
+                    Download
+                </button>
+            </div>
+
+            <div class="player-container" id="playerContainer" style="display: none;">
+                <p id="statusText" class="status-text">
+                    Playing preview...
+                </p>
+                <audio id="audioPlayer" controls></audio>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
